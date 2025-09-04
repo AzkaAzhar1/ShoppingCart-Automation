@@ -5,10 +5,19 @@
     <classes>
       <class name="com.sbstore.test.LoginTest">
         <methods>
-          <include name="InitDrive"/>
+          <include name="SelectingtheSubCategory"/>
           <include name="ViewCartProducts"/>
+          <include name="InitDrive"/>
+          <include name="Selectingthecategory"/>
+          <include name="loginwithvalidcredentials"/>
         </methods>
       </class> <!-- com.sbstore.test.LoginTest -->
+      <class name="com.sbstore.test.HomeTest">
+        <methods>
+          <include name="checklogo"/>
+          <include name="InitDrive"/>
+        </methods>
+      </class> <!-- com.sbstore.test.HomeTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

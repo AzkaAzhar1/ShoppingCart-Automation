@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
 
+import com.report.ExtentReportUtils;
+
 public class BaseTest {
 
 	
@@ -16,7 +18,6 @@ public class BaseTest {
 	
  
  @BeforeSuite
- 
 public void InitDrive() {
 	 
      ChromeOptions options = new ChromeOptions();
@@ -29,6 +30,8 @@ public void InitDrive() {
      options.setExperimentalOption("prefs", prefs);
      options.addArguments("--disable-save-password-bubble");
 	 
+     // setup method was a static method that's why we called it with a class name
+     ExtentReportUtils.setUpReport();
     //initialize driver 
 	driver = new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
