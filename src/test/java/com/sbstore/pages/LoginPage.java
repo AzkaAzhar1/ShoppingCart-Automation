@@ -1,3 +1,4 @@
+
 package com.sbstore.pages;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,6 +28,7 @@ public class LoginPage {
 	  
 	  @FindBy(xpath = "//img[@alt='SB Store']")
 	    WebElement sbStoreLogo;
+	 
 	
 	public LoginPage() {  //this is a constructor 
 		PageFactory.initElements(BaseTest.driver, this);  //this keyword tells pagefactory to for annotations in the class
@@ -57,6 +59,7 @@ public class LoginPage {
         }
 		
 	}
+	
 	
 	 public void IsLogodiplayed() {
 		 sbStoreLogo.click();		    

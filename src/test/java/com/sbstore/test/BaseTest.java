@@ -27,13 +27,23 @@ public void InitDrive() {
      Map<String, Object> prefs = new HashMap<>();
      prefs.put("credentials_enable_service", false);
      prefs.put("profile.password_manager_enabled", false);
+     prefs.put("profile.password_manager_leak_detection_enabled", false);
+     prefs.put("autofill.profile_enabled", false);
+     prefs.put("autofill.credit_card_enabled", false);
+
      options.setExperimentalOption("prefs", prefs);
+
+     // Disable "save password" and "change password" bubbles
      options.addArguments("--disable-save-password-bubble");
-	 
+
+     // Disable Chrome Safe Browsing & password check service
+     options.addArguments("--disable-features=PasswordManagerOnboarding,PasswordImport,AutofillServerCommunication,AutofillEnableAccountWalletStorage,PasswordCheck");
+     options.addArguments("--disable-blink-features=PasswordManagerUI");
+     
      // setup method was a static method that's why we called it with a class name
      ExtentReportUtils.setUpReport();
     //initialize driver 
-	driver = new ChromeDriver();
+	driver = new ChromeDriver(options);
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	driver.manage().window().maximize();
 	

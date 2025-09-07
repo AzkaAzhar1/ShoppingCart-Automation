@@ -93,7 +93,12 @@
   
   
 
-</dependencies>
+  <dependency>
+  	<groupId>com.test</groupId>
+  	<artifactId>Ecom-QA</artifactId>
+  	<version>0.0.2-SNAPSHOT</version>
+  </dependency>
+  </dependencies>
 
   
   

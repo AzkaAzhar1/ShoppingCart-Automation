@@ -16,10 +16,15 @@ public class AddToCart {
 
 
 	@FindBy(xpath = "//a[contains(@onclick,'showAddToCartModal')]\r\n")
+	WebElement productbtn;
+	
+	@FindBy (xpath = "//a[@title='Cart' and contains(@class,'d-flex')]")
+	WebElement verifycartcount;
+	
+	
+	@FindBy(xpath="//img[contains(@title, 'NESTLE MILO POUCH 70G')]")
 	WebElement product;
 	
-	@FindBy (xpath = "//a[@title='Cart' and contains(@class,'d-flex')]\r\n")
-	WebElement verifycartcount;
 	
 	
 	public AddToCart() {
@@ -38,14 +43,18 @@ public class AddToCart {
 		// Scroll into view
 	       ((JavascriptExecutor) BaseTest.driver).executeScript("arguments[0].scrollIntoView(true);", product);
 			
+	       
+	   	Actions action = new Actions(BaseTest.driver);
+		action.moveToElement(product).perform();
+	       
+		wait.until(ExpectedConditions.elementToBeClickable(product));
+
 	       // Click using JavaScript to avoid overlay issues
-	       ((JavascriptExecutor) BaseTest.driver).executeScript("arguments[0].click();", product);
+	       ((JavascriptExecutor) BaseTest.driver).executeScript("arguments[0].click();", productbtn);
 		
 		//for hovering on the product so that the add to cart button is visible 
-		Actions action = new Actions(BaseTest.driver);
-		action.moveToElement(product).perform();
+	
 		
-		wait.until(ExpectedConditions.elementToBeClickable(product));
 		
 		System.out.println("product added succesfully");
 		

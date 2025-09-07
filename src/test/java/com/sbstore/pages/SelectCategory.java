@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.report.ExtentReportUtils;
 import com.sbstore.test.BaseTest;
 
 public class SelectCategory {
@@ -34,6 +35,7 @@ public class SelectCategory {
             ((JavascriptExecutor) BaseTest.driver).executeScript("arguments[0].click();", category);
 
             System.out.println("Category clicked successfully!");
+            ExtentReportUtils.addStep("Category is clicked");
 
         } catch (Exception e) {
             System.out.println("Failed to click on category: " + e.getMessage());

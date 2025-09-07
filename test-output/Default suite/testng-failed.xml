@@ -5,8 +5,12 @@
     <classes>
       <class name="com.sbstore.test.LoginTest">
         <methods>
+          <include name="Addingtocartproduct"/>
+          <include name="SelectingtheSubCategory"/>
           <include name="InitDrive"/>
           <include name="ViewCartProducts"/>
+          <include name="Selectingthecategory"/>
+          <include name="loginwithvalidcredentials"/>
         </methods>
       </class> <!-- com.sbstore.test.LoginTest -->
     </classes>
