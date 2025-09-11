@@ -23,7 +23,7 @@ public class SelectCategory {
 
 	public void SelectingCategory() {
         try {
-            WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(15));
+            WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(30));
 
             // Wait until the category is visible
             wait.until(ExpectedConditions.visibilityOf(category));

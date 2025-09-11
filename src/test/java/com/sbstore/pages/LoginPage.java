@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.report.ExtentReportUtils;
 import com.sbstore.test.BaseTest;
 
 public class LoginPage {
@@ -26,8 +27,16 @@ public class LoginPage {
 	  @FindBy(xpath = "//button[@data-key='website-popup' and @data-toggle='remove-parent']")
 	    WebElement popupCloseButton;
 	  
+	  @FindBy(xpath = "//button[contains(text(),'Ok. I Understood')]\r\n")
+	  WebElement cookiepopup;
+	  
+	  @FindBy(xpath = "//button[@data-key='custom-alert-box-2']//i[contains(@class,'la-close')]")
+	  WebElement alertpopup;
+	  
 	  @FindBy(xpath = "//img[@alt='SB Store']")
 	    WebElement sbStoreLogo;
+	  
+	  
 	 
 	
 	public LoginPage() {  //this is a constructor 
@@ -60,6 +69,29 @@ public class LoginPage {
 		
 	}
 	
+	public void closingCookiePopup() {
+		
+		try {
+			if (cookiepopup.isDisplayed()) {
+				cookiepopup.click();
+			}
+		}
+		catch (Exception e) {
+			
+		}
+		ExtentReportUtils.addStep("cookie popup closed");
+	}
+	
+	public void CloseAlertPopup() {
+		
+		try {
+			if (alertpopup.isDisplayed()){
+				alertpopup.click();
+				ExtentReportUtils.addStep("alert is closed");
+			}
+		} catch (Exception e) {
+	}
+	}
 	
 	 public void IsLogodiplayed() {
 		 sbStoreLogo.click();		    

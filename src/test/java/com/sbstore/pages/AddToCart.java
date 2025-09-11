@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.report.ExtentReportUtils;
 import com.sbstore.test.BaseTest;
 
 public class AddToCart {
@@ -25,6 +26,8 @@ public class AddToCart {
 	@FindBy(xpath="//img[contains(@title, 'NESTLE MILO POUCH 70G')]")
 	WebElement product;
 	
+	@FindBy(xpath = "//a[text()='Home'")
+    WebElement home;
 	
 	
 	public AddToCart() {
@@ -62,7 +65,7 @@ public class AddToCart {
 			
 			System.out.println("product not added in cart"+ e.getMessage());
 		}
-		
+		ExtentReportUtils.addStep("Product added to cart");
 		
 	}
 	
@@ -85,9 +88,11 @@ public class AddToCart {
         System.out.println("Error verifying cart increment: " + e.getMessage());
     }
 		
-			
+			ExtentReportUtils.addStep("Cart Increment Verification");
 			
 		}
+	
+
 		
 		
 	}

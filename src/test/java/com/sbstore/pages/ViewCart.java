@@ -14,7 +14,7 @@ import com.sbstore.test.BaseTest;
 
 public class ViewCart {
 	
-	@FindBy(xpath = "//a[@title='Cart']")
+	@FindBy (xpath = "//a[@title='Cart' and contains(@class,'d-flex')]")	
 	WebElement cart;
 
 	@FindBy (xpath = "//a[contains(text(),'View cart')]")

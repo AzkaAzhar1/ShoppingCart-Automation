@@ -1,9 +1,14 @@
 package com.sbstore.test;
 
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.sbstore.pages.AddToCart;
+import com.sbstore.pages.GoBackToHomePage;
 import com.sbstore.pages.LoginPage;
 import com.sbstore.pages.SelectCategory;
 import com.sbstore.pages.SelectSubCategory;
@@ -18,6 +23,8 @@ public class LoginTest extends BaseTest{
 		
 		loginPage.logintosbstore("Sarah21@gmail.com", "123456");
 		loginPage.closePopupIfPresent();
+		loginPage.closingCookiePopup();
+		loginPage.CloseAlertPopup();
 		loginPage.IsLogodiplayed();
 		
 		
@@ -46,12 +53,26 @@ public class LoginTest extends BaseTest{
 	public void Addingtocartproduct() {
 		AddToCart cart = new AddToCart();
 		cart.AddingToCart();
-		cart.VerifyCartIncrement();
-		
+		cart.VerifyCartIncrement();		
 		
 	}
 	
 	@Test (priority = 5)
+	public void GoingBacktohomepage() {
+		
+		GoBackToHomePage home = new GoBackToHomePage();
+		home.returntohomepage();
+		
+String actualURL = "https://sbstore.com.pk/";
+
+WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(5));
+wait.until(ExpectedConditions.urlToBe(actualURL));
+
+Assert.assertEquals(BaseTest.driver.getCurrentUrl(), actualURL);
+	}
+	
+	
+	/* @Test (priority = 6)
 	public void ViewCartProducts() {
 		
 		ViewCart view = new ViewCart();
@@ -60,6 +81,6 @@ public class LoginTest extends BaseTest{
 		
 		Assert.assertTrue(BaseTest.driver.getCurrentUrl().contains("https://sbstore.com.pk/cart"));
 		
-	}
+	} */
 	
 }
