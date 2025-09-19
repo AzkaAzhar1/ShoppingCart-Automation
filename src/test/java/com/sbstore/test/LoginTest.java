@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.sbstore.pages.AddToCart;
+import com.sbstore.pages.Checkout;
 import com.sbstore.pages.GoBackToHomePage;
 import com.sbstore.pages.LoginPage;
 import com.sbstore.pages.SelectCategory;
@@ -72,7 +73,7 @@ Assert.assertEquals(BaseTest.driver.getCurrentUrl(), actualURL);
 	}
 	
 	
-	/* @Test (priority = 6)
+	 @Test (priority = 6)
 	public void ViewCartProducts() {
 		
 		ViewCart view = new ViewCart();
@@ -81,6 +82,11 @@ Assert.assertEquals(BaseTest.driver.getCurrentUrl(), actualURL);
 		
 		Assert.assertTrue(BaseTest.driver.getCurrentUrl().contains("https://sbstore.com.pk/cart"));
 		
-	} */
-	
+	} 
+	 
+	 @Test (priority = 7)
+	 public void CheckingOut() {
+		 Checkout Cout = new Checkout();
+		 Cout.GoToCheckOut();
+	 }
 }

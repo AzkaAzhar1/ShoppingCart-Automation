@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,6 +108,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.sbstore.test.LoginTest" class="method navigator-link" hash-for-method="CheckingOut">CheckingOut</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.sbstore.test.LoginTest" class="method navigator-link" hash-for-method="GoingBacktohomepage">GoingBacktohomepage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -119,6 +124,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.sbstore.test.LoginTest" class="method navigator-link" hash-for-method="Selectingthecategory">Selectingthecategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.sbstore.test.LoginTest" class="method navigator-link" hash-for-method="ViewCartProducts">ViewCartProducts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -158,6 +168,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="CheckingOut">
+                  </a> <!-- CheckingOut -->
+                  <span class="method-name">CheckingOut</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="GoingBacktohomepage">
                   </a> <!-- GoingBacktohomepage -->
                   <span class="method-name">GoingBacktohomepage</span>
@@ -175,6 +192,13 @@
                   <a name="Selectingthecategory">
                   </a> <!-- Selectingthecategory -->
                   <span class="method-name">Selectingthecategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ViewCartProducts">
+                  </a> <!-- ViewCartProducts -->
+                  <span class="method-name">ViewCartProducts</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -257,31 +281,39 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'GoingBacktohomepage')
+data.setCell(0, 1, 'Selectingthecategory')
 data.setCell(0, 2, 'com.sbstore.test.LoginTest')
-data.setCell(0, 3, 26785);
+data.setCell(0, 3, 31887);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginwithvalidcredentials')
 data.setCell(1, 2, 'com.sbstore.test.LoginTest')
-data.setCell(1, 3, 19845);
+data.setCell(1, 3, 24176);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Selectingthecategory')
+data.setCell(2, 1, 'SelectingtheSubCategory')
 data.setCell(2, 2, 'com.sbstore.test.LoginTest')
-data.setCell(2, 3, 19186);
+data.setCell(2, 3, 10944);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'SelectingtheSubCategory')
+data.setCell(3, 1, 'ViewCartProducts')
 data.setCell(3, 2, 'com.sbstore.test.LoginTest')
-data.setCell(3, 3, 15716);
+data.setCell(3, 3, 10923);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Addingtocartproduct')
+data.setCell(4, 1, 'GoingBacktohomepage')
 data.setCell(4, 2, 'com.sbstore.test.LoginTest')
-data.setCell(4, 3, 1084);
+data.setCell(4, 3, 3921);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'checklogo')
-data.setCell(5, 2, 'com.sbstore.test.HomeTest')
-data.setCell(5, 3, 59);
+data.setCell(5, 1, 'CheckingOut')
+data.setCell(5, 2, 'com.sbstore.test.LoginTest')
+data.setCell(5, 3, 3870);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Addingtocartproduct')
+data.setCell(6, 2, 'com.sbstore.test.LoginTest')
+data.setCell(6, 3, 910);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'checklogo')
+data.setCell(7, 2, 'com.sbstore.test.HomeTest')
+data.setCell(7, 3, 28);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -326,30 +358,38 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">loginwithvalidcredentials</span>
-                <span class="method-start">5367 ms</span>
+                <span class="method-start">4243 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Selectingthecategory</span>
-                <span class="method-start">25221 ms</span>
+                <span class="method-start">28423 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SelectingtheSubCategory</span>
-                <span class="method-start">44407 ms</span>
+                <span class="method-start">60312 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Addingtocartproduct</span>
-                <span class="method-start">60128 ms</span>
+                <span class="method-start">71257 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">GoingBacktohomepage</span>
-                <span class="method-start">61214 ms</span>
+                <span class="method-start">72169 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ViewCartProducts</span>
+                <span class="method-start">76092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckingOut</span>
+                <span class="method-start">87016 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.sbstore.test.HomeTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">checklogo</span>
-                <span class="method-start">88004 ms</span>
+                <span class="method-start">90888 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

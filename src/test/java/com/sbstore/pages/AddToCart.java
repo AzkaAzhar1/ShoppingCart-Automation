@@ -43,7 +43,7 @@ public class AddToCart {
 		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(product));
 		
-		// Scroll into view
+		// Scroll into view   (direct cast without javascript object) 
 	       ((JavascriptExecutor) BaseTest.driver).executeScript("arguments[0].scrollIntoView(true);", product);
 			
 	       

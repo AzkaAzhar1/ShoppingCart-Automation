@@ -8,7 +8,7 @@
     <classes>
       <class name="com.sbstore.test.LoginTest">
         <methods>
-          <include name="GoingBacktohomepage"/>
+          <include name="CheckingOut"/>
           <include name="InitDrive"/>
         </methods>
       </class> <!-- com.sbstore.test.LoginTest -->

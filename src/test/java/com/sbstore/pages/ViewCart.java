@@ -17,7 +17,7 @@ public class ViewCart {
 	@FindBy (xpath = "//a[@title='Cart' and contains(@class,'d-flex')]")	
 	WebElement cart;
 
-	@FindBy (xpath = "//a[contains(text(),'View cart')]")
+	@FindBy (xpath = "//a[normalize-space()='View cart']")
 	WebElement viewcart;
 	
  public ViewCart() {
@@ -42,7 +42,7 @@ public class ViewCart {
 		
 		  WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(15));
 		    Actions action = new Actions(BaseTest.driver);
-		    action.moveToElement(cart).perform(); // hover if needed
+		    action.moveToElement(viewcart).perform(); // hover if needed
 		    wait.until(ExpectedConditions.elementToBeClickable(viewcart));
 		    viewcart.click(); 
 		    
