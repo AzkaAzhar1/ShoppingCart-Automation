@@ -53,7 +53,7 @@ public class LoginPage {
 		passwordfield.sendKeys(password);
 		log.info("password is entered in password textbox");
 		loginbutton.click();
-		log.info("login button is clicked");
+		log.info("login button was clicked");
 		
 	}
 	

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.report.ExtentReportUtils;
 import com.sbstore.test.BaseTest;
 
 public class Checkout {
@@ -26,11 +27,13 @@ public class Checkout {
 		
 		WebDriverWait wait = new WebDriverWait(BaseTest.driver, Duration.ofSeconds(15));
 		WebElement GoToCheckOutBtn = wait.until(ExpectedConditions.visibilityOf(checkoutBtn));
+		ExtentReportUtils.addStep("Checkout Page");
 		
 		((JavascriptExecutor)BaseTest.driver).executeScript("arguments[0].scrollIntoView(true);", GoToCheckOutBtn);
 		
 
 		((JavascriptExecutor)BaseTest.driver).executeScript("arguments[0].click()", GoToCheckOutBtn);
+		
 		
 	}
 }
