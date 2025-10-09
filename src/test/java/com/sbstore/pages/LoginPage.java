@@ -79,7 +79,7 @@ public class LoginPage {
 		catch (Exception e) {
 			
 		}
-		ExtentReportUtils.addStep("cookie popup closed");
+		ExtentReportUtils.addStep("cookie is popup closed");
 	}
 	
 	public void CloseAlertPopup() {
